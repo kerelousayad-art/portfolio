@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerelous Ayad – Portfolio</title>
+  <style>
+    /* ==========================
+       KERELOUS AYAD – FULL PORTFOLIO
+       HTML + CSS IN ONE FILE
+       Professional Dark Modern UI
+       ========================== */
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f1115;
+      color: #eeeeee;
+    }
+
+    /* HEADER */
+    header {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .navigation ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #eeeeee;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navigation a:hover {
+      color: #00adb5;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1200px;
+      margin: 5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .hero-text .name {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .hero-text .title {
+      font-size: 4rem;
+      color: #00adb5;
+      font-weight: 700;
+    }
+
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.8rem;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hire {
+      background: #00adb5;
+      color: #ffffff;
+    }
+
+    .hire:hover,
+    .work:hover {
+      transform: scale(1.1);
+    }
+
+    .work {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      color: #eeeeee;
+    }
+
+    .hero-img {
+      width: 420px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 1200px;
+      margin: 5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0 1rem;
+    }
+
+    .about h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .about h2 span {
+      color: #00adb5;
+    }
+
+    .about p {
+      margin-top: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+    }
+
+    .about-img {
+      width: 450px;
+    }
+
+    /* WORKS */
+    .works {
+      margin-top: 6rem;
+      padding: 4rem 1rem;
+      background: #13161c;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+
+    .section-title span {
+      color: #00adb5;
+    }
+
+    .videos-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: rgba(57, 62, 70, 0.4);
+      padding: 1rem;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      transition: 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .video-card h3 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      max-width: 1200px;
+      margin: 5rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .contact-box {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255,255,255,0.08);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .contact-item a, .contact-item p {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      padding: 2rem;
+      background: #0b0d11;
+      color: #bbb;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .about {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="text-logo">Kerelous Ayad</div>
+    
+    <nav class="navigation">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#works">My Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="name">I’m Kerelous</h1>
+      <h1 class="title">Video Editor</h1>
+      <div class="hero-buttons">
+        <a class="btn hire" href="#contact">Hire Me</a>
+        <a class="btn work" href="#works">My Works</a>
+      </div>
+    </div>
+    <img src="assets/svg/Hero.svg" alt="Hero Image" class="hero-img" />
+  </section>
+
+  <section class="about" id="about">
+    <img src="assets/svg/AboutMe.svg" alt="About Image" class="about-img" />
+    <div class="about-text">
+      <h2>About <span>Me</span></h2>
+      <p>
+        I'm Kerelous, a passionate Video Editor who transforms raw footage into engaging, cinematic visuals. I work on real estate videos, reels, long-form YouTube content, and creative storytelling edits.
+      </p>
+    </div>
+  </section>
+
+  <section class="works" id="works">
+    <h2 class="section-title">My Recent <span>Works</span></h2>
+
+    <div class="videos-grid">
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/xIQyFrDf2-0?si=YWxTGzgRq9Za1Pa2" allowfullscreen></iframe>
+        <h3>Motion Graphic</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/LnsdWrp4uzw" allowfullscreen></iframe>
+        <h3>Reels Montage</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="" allowfullscreen></iframe>
+        <h3>Long Video Edit</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="contact-box">
+
+      <div class="contact-item">
+        <img src="assets/svg/Email.svg" alt="Email" />
+        <a href="mailto:kerelousayad@gmail.com">kerelousayad@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="assets/svg/phone.svg" alt="Phone" />
+        <p>+201115150260</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Kerelous Ayad © 2025</p>
+  </footer>
+
+</body>
+</html>
