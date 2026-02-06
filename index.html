@@ -10,7 +10,6 @@
 
 :root {
   --bg-main: #0b0d12;
-  --bg-section: #11141b;
   --primary: #7c7cff;
   --secondary: #00f5d4;
   --text-main: #f1f1f1;
@@ -31,7 +30,7 @@ body {
   color: var(--text-main);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
   max-width: 1200px;
   margin: 2rem auto;
@@ -66,7 +65,7 @@ header {
   color: var(--secondary);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   max-width: 1200px;
   margin: 5rem auto;
@@ -129,7 +128,7 @@ header {
   100% { transform: translateY(0); }
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about {
   max-width: 1200px;
   margin: 5rem auto;
@@ -157,7 +156,7 @@ header {
   width: 450px;
 }
 
-/* WORKS */
+/* ================= WORKS ================= */
 .works {
   margin-top: 6rem;
   padding: 4rem 1rem;
@@ -200,7 +199,7 @@ header {
   margin-top: 1rem;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 .contact {
   max-width: 1200px;
   margin: 5rem auto;
@@ -234,7 +233,7 @@ footer {
   color: #aaa;
 }
 
-/* TABLET */
+/* ================= TABLET ================= */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -248,12 +247,34 @@ footer {
   }
 }
 
-/* 🔥 MOBILE FIX ONLY 🔥 */
+/* ================= MOBILE ONLY ================= */
 @media (max-width: 600px) {
 
+  /* header = logo only */
   header {
+    justify-content: center;
+    padding: 1.2rem 0;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .text-logo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  /* center everything */
+  section,
+  footer {
+    text-align: center;
+  }
+
+  .hero {
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    margin: 3rem auto;
   }
 
   .hero-text .name {
@@ -266,19 +287,22 @@ footer {
 
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 
   .btn {
-    width: 100%;
+    width: 85%;
     text-align: center;
   }
 
   .hero-img {
-    width: 280px;
+    width: 260px;
   }
 
   .about {
     padding: 2rem 1.5rem;
+    align-items: center;
   }
 
   .about h2 {
@@ -295,10 +319,27 @@ footer {
 
   .videos-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .video-card {
+    max-width: 360px;
+    width: 100%;
   }
 
   .video-card iframe {
     height: 200px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    width: 90%;
+    justify-content: center;
   }
 }
 </style>
@@ -368,6 +409,7 @@ footer {
 
 <section class="contact" id="contact">
   <h2 class="section-title">Contact <span>Me</span></h2>
+
   <div class="contact-box">
     <div class="contact-item">
       <a href="mailto:kerelousayad@gmail.com">kerelousayad@gmail.com</a>
